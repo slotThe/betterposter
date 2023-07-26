@@ -45,3 +45,4 @@ to be found in [example-portrait.tex](./example-portrait.tex):
 
 [bp-latex]: https://github.com/rafaelbailo/betterposter-latex-template
 [bp]: https://www.youtube.com/watch?v=1RwJbhkCA58&feature=youtu.be
+[tikzposter]: https://www.ctan.org/pkg/tikzposter
