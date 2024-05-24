@@ -21,6 +21,9 @@
 \DeclareBoolOption{landscape}
 \DeclareComplementaryOption{portrait}{landscape}
 
+\DeclareBoolOption{noFonts}
+\DeclareComplementaryOption{libertine}{noFonts}
+
 \ifBP@landscape
   \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \else
@@ -64,8 +67,12 @@
 
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
-\RequirePackage[ttscale=.85]{libertine}
-\RequirePackage{libertinust1math}
+\ifBP@noFonts\else
+  \RequirePackage[sb,osf]{libertinus}
+  \RequirePackage{textcomp}
+  \RequirePackage[varqu,varl]{zi4}% Inconsolata for mono, not LibertineMono
+  \RequirePackage[amsthm,upint,lcgreekalpha]{libertinust1math}
+\fi
 
 % Colours
 \RequirePackage{xcolor}
@@ -84,7 +91,9 @@
 \RequirePackage{graphicx}
 
 % AMS packages
-\RequirePackage{amsmath}
+\ifBP@noFonts
+  \RequirePackage{amsmath} % Loaded by libertinust1math
+\fi
 \RequirePackage{amsfonts}
 \RequirePackage{amssymb}
 
