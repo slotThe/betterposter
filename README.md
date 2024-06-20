@@ -8,7 +8,7 @@ The difference between that version and this repository are the following:
   - The class now—with the help of [tikzposter]—also provides a portrait version of betterposter.
 
   - Fonts and (default) font-sizes have been slightly tweaked.
-    Additionally, there is a `no-fonts` switch that can be flipped,
+    Additionally, there is a `noFonts` switch that can be flipped,
     to disable the loading of external fonts.
 
   - All commands regarding QR codes have been removed;
